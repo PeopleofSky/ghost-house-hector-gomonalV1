@@ -1,5 +1,3 @@
-
-
 *{
     padding: 0;
     margin: 0;
@@ -35,10 +33,10 @@ a:hover{
 }
 .logoimg{
     display: flexbox;
-    position: absolute; z-index: 5px;
+    position: absolute; z-index: 10;
     right: 90%;
     bottom: 77%;
-    /*intente todo para colocar esta foto adelante, pero lo sigue tapando el main*/
+    
 }
 
 .namecompany{
@@ -69,7 +67,7 @@ a:hover{
 .imagecasa{
     position: absolute;
     top: 0px;
-    left: 855px;
+    left: 845px;
 
 }
 .imagecasa{
@@ -219,13 +217,41 @@ body{
     .snow_wrap{
         height: 100vh;
         width: 100%;
-        background:url('../assets/imagen/5-centimeters-per-second-makoto-shinkai-winter-snow-wallpaper.jpg');
+        background:url('../assets/imagen/indexfotos/wallpaperoriginal.jpeg');
         background-size: cover;
         background-position: center bottom; 
         overflow: hidden;
         position: relative;
     }
-    
+
+    .lucesauto{
+        position: absolute;
+        top: 580px;
+        opacity: 2%;
+        
+
+    }
+    .lucesauto:hover{
+        opacity: 100%;
+    }
+
+    .faro1{
+       position: absolute;
+       top: 170px; 
+       left: 133px;
+       opacity: 2%;
+    }
+    .faro1:hover{
+        opacity: 100%;
+    }
+    .luxfaro1hijo{
+        position: absolute;
+        top: -104px;
+        left: -130px;
+        visibility: hidden;
+    }
+
+   
     .snow, .snow:before, .snow:after {
       position: absolute;
       top: -650px;
