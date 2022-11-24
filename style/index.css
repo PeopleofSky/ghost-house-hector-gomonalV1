@@ -3,32 +3,124 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*NO SE PORQUE EL INDEX ME GENERA ESE SCROLL, NO LO ENTIENDO, PROBE BORRANDO, SACANDO, 
+AJUSTANDO A COVER, A 100VW O 100VH, EN MODO INSPECCIONAR Y NO SE DE DONDE APARECE EL SIZE EXTRA*/
 /*BARRA NAVEgador*/
+
+
 a{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Amatic SC', cursive;
     text-decoration: none;
     color: azure;
-    font-size: 16pt;
+    font-size: 24pt;
    margin-right: 50px;
+   z-index: 4;
 }
-header{
+nav{
+    background-color:rgb(41, 38, 54);
     display: flex;
-    min-height: 70px;
-    background-color: rgb(41, 38, 54);
     align-items: center;
-    padding: 10px 40px;
     justify-content: space-between;
 }
-a nav{
-    font-weight: 600;
-    padding-right: 10px;
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
 }
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    padding: 25px;
+
+}
+
+.inicio{
+    visibility: hidden;
+}
+.namecompany{
+    display: flex;
+    position: absolute;
+    top: 1.7%;
+    left: 10%;
+    z-index: 2;
+     font-family: 'Amatic SC', cursive;
+     font-weight: bold;
+    font-size: 45px;
+}
+
+
+
 a:hover{
+    color: #fff;
     letter-spacing: 0.20em;
     text-shadow: -2px -7px 6px rgb(137, 120, 253);
 }
+
+.fa-bars{
+    color: #fff;
+    font-size: 25px;
+    padding: 20px;
+    visibility: hidden;
+}
+            @media(max-width:600px){
+                
+                nav ul{
+                    position: fixed;
+                    flex-direction: column;
+                    top: 0;
+                    left: -650px;
+                    justify-items: center;
+                    width: 100vw;
+                    height: auto;
+                    z-index: 3;
+                    background-color: rgb(41, 38, 54);
+                    transition: 0.2s;
+                    box-shadow: 0px 0px 20px 0px  rgb(137, 120, 253);
+
+
+                }
+                .fa-bars{visibility: visible;}
+
+                .fa-bars:hover + ul{left: 0;}
+
+                nav ul:hover{left: 0;}
+
+                .logoimg{visibility: hidden;}
+
+                .inicio{visibility: visible;}
+
+                .snow_wrap{
+                    visibility: hidden;
+                    height: 100vh;
+                    width: 100%;
+                    background-color: rgba(12, 11, 11, 0);
+                    
+                    overflow: hidden;
+                    position: relative;
+                }
+            .conte-padre{
+                visibility: hidden;
+            }
+            .namecompany{
+                left: 20%;
+                top: 0.5%;
+            }
+            .bodyindex{
+                z-index: 1;
+                background-image: url('../assets/imagen/indexfotos/wallpapergif.gif');
+                background-size: cover;
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;}
+
+            }
+
 .logo{
     display: flex;
+    z-index: 1;
 
 }
 .logoimg{
@@ -39,24 +131,15 @@ a:hover{
     
 }
 
-.namecompany{
-    display: flex;
-    position: absolute;
-    right: 73%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 35px;
-}
-
-
-
-
 .conte-padre{
-    background-color: black;
+    
+    background-color: rgb(0, 0, 0);
     background-size: cover;
     position: relative;
 }
 
 .conte-degradado {
+    background-image: url(../assets/imagen/indexfotos/fondo\ texto.jpg);
     background: radial-gradient(circle at 20px 20px, tran 0%, rgb(0, 0, 0) 300px);
     height: 100%;
     width: 100%;
@@ -64,99 +147,184 @@ a:hover{
     top: 0px;
     left: 0px;
 }
+
 .imagecasa{
     position: absolute;
-    top: 0px;
-    left: 845px;
+    bottom: 0%;
+    left: 40%;
 
 }
 .imagecasa{
-    width: 600px;
+    width: 950px;
 }
 
 
 
 
 /*NOTICIAS*/
-.bodydark{
-    background-color: rgb(27, 27, 27);
+.bodybg{
+    background-image: url(../assets/imagen/body\ wallpaper.jpg);
+    background-repeat: repeat;
 }
 
-.noticiastext{
-  font-size: 60px;
-  color: azure;
-  padding: 20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
+.about-section-padding{
+    background-color: rgb(41, 38, 54);
+    padding-bottom: 0.8px;
+}
+.imagenesnoticias:hover{
+    transition: 0.4s;
+    transform: scale(1.2);
 }
 
-.not01{
-    display: block;
-    justify-content: center;
+.tituloz{
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 70px;
 }
-.not1{
- color: beige; 
- padding-top: 90px;
- padding-bottom: 20px; 
- text-align: center; 
- font-family: Verdana, Geneva, Tahoma, sans-serif;
+.subtituloz{
+    font-family: 'Amatic SC', cursive;
+    font-stretch: expanded;
+    font-size: 30px;
 }
-.not1foto{
-    display: block;
-    margin: auto;
-    width: 700px;
-    padding: 50px 50px 5px 50px;
-    background-color: rgb(47, 46, 49);
-}
-.not1p{
-    color: aliceblue;
-    display: block;
-    width: 700px;
-    font-size: 16pt;
-    margin: auto;
-    text-align: center;
-    padding: 5px 50px 5px 50px;
-    background-color: rgb(47, 46, 49);
-}
-.not1foto2{
-    display: block;
-    margin: auto;
-    width: 700px;
-    padding: 20px 50px 5px 50px;
-    background-color: rgb(47, 46, 49);
-}
-.not1sub{
-    color: aliceblue;
-    display: block;
-    width: 700px;
-    font-size: 20px;
-    margin: auto;
-    text-align: center;
-    padding: 4px;
-    background-color: rgb(47, 46, 49);
-}
-.not1p2{
-    color: aliceblue;
-    display: block;
-    width: 700px;
-    font-size: 16pt;
-    margin: auto;
-    text-align: center;
-    padding: 5px 50px 5px 50px;
-    background-color: rgb(47, 46, 49); 
-}
+
+
 
 /* TRAILER*/
-
-.videoformato{
-    display: block;
-    margin: auto;
+.bodytrailer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 100vh;
+    background-image: url(../assets/imagen/body\ wallpaper.jpg);
+    background-repeat: repeat;
 }
 
 
-body{
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    
+}
+.card:hover {
+    width: 600px;
+    
+    transition-delay: 0s;
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: black;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(251, 246, 255);
+    border-radius: 20px;
+    clip-path: circle(120px at center);
+    transition: 0.5s
+}
+.card:hover .circle::before{
+    clip-path: circle(400px at center);
+    overflow: hidden;
+}
+
+.card .circle .logotrailer1{
+    position: relative;
+    width: 250px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.card:hover .circle .logotrailer1{
+    transform: scale(0);
+    transition-delay: 0.2s;
+}
+.contenido{
+    font-size: 3px;
+    position: relative;
+    width: 60%;
+    left: 10%;
+    padding: 5px 5px 5px 5px;
+    visibility: hidden;
+    transition: 0s;
+    
+
+}
+.card:hover .contenido{
+    left: 0;
+    opacity: 1;
+    font-size: 14px;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.contenido h2{
+    color: rgb(142, 16, 16);
+    text-transform: uppercase;
+}
+
+.card .videoyoutube{
+    position: absolute;
+    
+    top: 30%;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    
+}
+.card:hover .videoyoutube{
+    transform: scale(1);
+    top: 90%;
+    z-index: 2;
+    
+
+}
+@media(max-width:500px){
+.bodytrailer{
+    justify-content: left;
+ }
+ .card{
+    width: 35%;
+    
+ }
+ .card:hover{
+    justify-content: left;
+    width: 42%;
+ }
+ .card .videoyoutube{
+    z-index: 1;
+    position: absolute;
+    width: 100vw
+    
+ }
+ .trailer2{
+    display: block;
+    
+ }
+}
+
+
+
 
 
 
@@ -186,17 +354,26 @@ h1{
  padding: 25px; 
 }
 
-.formulario{
+
+.formulario1{
     
-    background-color: rgb(56, 56, 84);
-    color: azure;
+    max-width: 35em;
+    padding: 1.3em;
     margin: 0 auto;
-    width: 300px;
-    padding: 20px;
-    font-size: 16pt;}
-    .contacto{
-        padding-bottom: 60px;
-    }
+    background-color: rgba(59, 51, 114, 0.3);
+    font-weight: bold;
+    border-radius: 1em;
+    box-shadow: inset 1px  1px 12px 4px rgba(253, 253, 253, 0.605) ;
+}
+.formulario1:hover{
+    box-shadow: inset 2px  2px 30px 3px rgba(253, 253, 253, 0.605) ;
+}
+
+.btn:hover{
+    transition: 0.2s;
+    transform: scale(1.3);
+    animation: ease-in-out;
+}
 
     /*NIEVE*/
 
@@ -211,15 +388,15 @@ body{
         font-size: 16px;
         margin: 0;
         background: rgb(2, 2, 2);
-        color: #000;
+        color: rgb(0, 0, 0);
     }
-    
+
     .snow_wrap{
         height: 100vh;
         width: 100%;
-        background:url('../assets/imagen/indexfotos/wallpaperoriginal.jpeg');
+        background-image: url(../assets/imagen/indexfotos/backgroundcolorblue1400x800.jpg);
         background-size: cover;
-        background-position: center bottom; 
+        background-position: bottom; 
         overflow: hidden;
         position: relative;
     }
@@ -233,6 +410,7 @@ body{
     }
     .lucesauto:hover{
         opacity: 100%;
+        
     }
 
     .faro1{
@@ -243,15 +421,28 @@ body{
     }
     .faro1:hover{
         opacity: 100%;
-    }
-    .luxfaro1hijo{
-        position: absolute;
-        top: -104px;
-        left: -130px;
-        visibility: hidden;
+        
     }
 
-   
+/*GHOST EN INDEX*/
+    .ghostindex{
+        position: absolute;
+        top: 400px;
+        left: 540px;
+       opacity: 0%;
+        
+    }   
+    .ghostindex:hover{
+    animation: Ghostindex 3s;
+    animation-iteration-count: infinite;
+    }
+   @keyframes Ghostindex {
+    0% {    opacity: 0%;}
+    50% { opacity: 100%;}
+    100% { opacity: 0%;}
+   }
+/*COPOS NIEVE*/
+
     .snow, .snow:before, .snow:after {
       position: absolute;
       top: -650px;
@@ -294,3 +485,4 @@ body{
         transform: translateY(650px);
       }
     }
+

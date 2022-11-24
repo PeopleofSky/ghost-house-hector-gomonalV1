@@ -1,7 +1,7 @@
 const conteDegradado = document.querySelector('.conte-degradado');
 const sizeDegradado = 500;
 
-conteDegradado.style.background = `radial-gradient(circle at 40px 40px, transparent 0%, black ${sizeDegradado}px)`
+conteDegradado.style.background = `radial-gradient(circle at 40px 40px, transparent 0%, black ${sizeDegradado}px) `
 
 conteDegradado.addEventListener('mousemove', (e) => {
     const x = e.clientX
