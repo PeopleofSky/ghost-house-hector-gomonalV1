@@ -3,9 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-/*NO SE PORQUE EL INDEX ME GENERA ESE SCROLL, NO LO ENTIENDO, PROBE BORRANDO, SACANDO, 
-AJUSTANDO A COVER, A 100VW O 100VH, EN MODO INSPECCIONAR Y NO SE DE DONDE APARECE EL SIZE EXTRA*/
-/*BARRA NAVEgador*/
 
 
 a{
@@ -18,22 +15,28 @@ a{
 }
 nav{
     background-color:rgb(41, 38, 54);
+    width: 100vw;
+    height:90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 nav ul{
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: center;
     list-style-type: none;
+    margin-right: 8%;
 }
 nav ul li a{
     text-decoration: none;
-    display: block;
+    display: flex;
     color: #fff;
-    padding: 25px;
+    padding: 14%;
+    padding-right: 50px;
+    
 
 }
 
@@ -65,13 +68,94 @@ a:hover{
     padding: 20px;
     visibility: hidden;
 }
-            @media(max-width:600px){
+@media(max-width:980px){
+    .logoimg{
+        width: 80px;
+        left: 1%;
+        margin-top: 1%;
+    }
+    .namecompany{
+        display: flex;
+        position: absolute;
+        top: 15%;
+        left: 9%;
+        z-index: 2;
+         font-family: 'Amatic SC', cursive;
+         font-weight: bold;
+        font-size: 45px;
+    }
+    nav{
+        background-color:rgb(41, 38, 54);
+        width: 100vw;
+        display: flex;
+    justify-content: right;}
+
+    nav ul{
+        text-align: center;
+        margin-left: 10%;
+        
+    }
+    a:hover{
+        color: #fff;
+        letter-spacing: 0.05em;
+        text-shadow: -2px -7px 6px rgb(137, 120, 253);
+    }
+
+    .imagecasa{
+        width: auto;
+    }
+   
+        
+    .conte-degradado{
+        visibility: hidden;
+    }
+    nav ul li a{
+        padding-right: 1px;
+    }
+
+    
+
+}
+
+    @media(max-width:644px){
+                
+                nav{
+                    background-color:rgb(41, 38, 54);
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
                 
                 nav ul{
+                    margin-left: 0%;
                     position: fixed;
                     flex-direction: column;
                     top: 0;
-                    left: -650px;
+                    left: -730px;
+                    justify-items: center;
+                    width: 100vw;
+                    height: auto;
+                    z-index: 3;
+                    background-color: rgb(41, 38, 54);
+                    border-radius: 2.5%;
+                    border-style: groove;
+                    transition: 0.2s;
+                    box-shadow: 0px 0px 20px 0px  rgb(137, 120, 253);
+
+
+                }
+
+
+                .fa-bars{visibility: visible;}
+
+                .fa-bars:hover + ul{left: 0;}
+
+                nav ul:hover{
+                    position: fixed;
+                    flex-direction: column;
+                    top: 0;
+                    left: 0px;
                     justify-items: center;
                     width: 100vw;
                     height: auto;
@@ -80,15 +164,11 @@ a:hover{
                     transition: 0.2s;
                     box-shadow: 0px 0px 20px 0px  rgb(137, 120, 253);
 
-
                 }
-                .fa-bars{visibility: visible;}
 
-                .fa-bars:hover + ul{left: 0;}
-
-                nav ul:hover{left: 0;}
-
-                .logoimg{visibility: hidden;}
+                .logoimg{visibility: visible;
+                margin-left: 80%;
+            width: 55px;}
 
                 .inicio{visibility: visible;}
 
@@ -106,17 +186,17 @@ a:hover{
             }
             .namecompany{
                 left: 20%;
-                top: 0.5%;
+                top: 2%;
             }
             .bodyindex{
                 z-index: 1;
-                background-image: url('../assets/imagen/indexfotos/wallpapergif.gif');
+                background-image: url(../imagen/indexfotos/wallpapergif.gif);
                 background-size: cover;
                 width: 100%;
                 background-position: center;
                 background-repeat: no-repeat;}
 
-            }
+                }
 
 .logo{
     display: flex;
@@ -124,10 +204,8 @@ a:hover{
 
 }
 .logoimg{
-    display: flexbox;
-    position: absolute; z-index: 10;
-    right: 90%;
-    bottom: 77%;
+ position: absolute;
+ z-index: 7;
     
 }
 
@@ -149,21 +227,21 @@ a:hover{
 }
 
 .imagecasa{
+    width: 70%;
     position: absolute;
     bottom: 0%;
-    left: 40%;
+    left: 36%;
+    
 
 }
-.imagecasa{
-    width: 950px;
-}
+
 
 
 
 
 /*NOTICIAS*/
 .bodybg{
-    background-image: url(../assets/imagen/body\ wallpaper.jpg);
+    background-image: url(../imagen/body\ wallpaper.jpg);
     background-repeat: repeat;
 }
 
@@ -196,7 +274,7 @@ a:hover{
     align-items: center;
     flex-wrap: wrap;
     min-width: 100vh;
-    background-image: url(../assets/imagen/body\ wallpaper.jpg);
+    background-image: url(../imagen/body\ wallpaper.jpg);
     background-repeat: repeat;
 }
 
@@ -341,17 +419,42 @@ h1{
     margin-top: 100px;
     justify-content: center;
 }
+@media(max-width:1100px){
+    
+    .sobrenosotros{
+        flex-direction: column;
+        background-image: linear-gradient(to top, rgb(56, 56, 84) , black);
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+}
 
 .imgnosotros{
-    width: 450px;
-    
+    display: flex;
+    width: 500px;}
+@media(max-width: 1100px) {
+    .imgnosotros{
+      
+        width: 400px;
+      
+    }
     
 }
+
 .descrip{
 
- width: 700px;
+ width: auto;
  font-size: 22px; 
- padding: 25px; 
+ padding: 50px; 
+ text-align: center;
+}
+@media(max-width: 990px ) {
+    .descrip{
+        text-align: justify;
+    }
+    
 }
 
 
@@ -392,14 +495,15 @@ body{
     }
 
     .snow_wrap{
-        height: 100vh;
+        height: 90vh;
         width: 100%;
-        background-image: url(../assets/imagen/indexfotos/backgroundcolorblue1400x800.jpg);
+        background-image: url(../imagen/indexfotos/backgroundcolorblue1400x800.jpg);
         background-size: cover;
         background-position: bottom; 
         overflow: hidden;
         position: relative;
     }
+/*SE TUVO QUE DESACTIVAR ESTAS ANIMACIONES POR PROBLEMAS CON @MEDIA
 
     .lucesauto{
         position: absolute;
@@ -424,11 +528,11 @@ body{
         
     }
 
-/*GHOST EN INDEX*/
+/*GHOST EN INDEX
     .ghostindex{
         position: absolute;
-        top: 400px;
-        left: 540px;
+        top:48%;
+        left:40%;
        opacity: 0%;
         
     }   
@@ -440,7 +544,9 @@ body{
     0% {    opacity: 0%;}
     50% { opacity: 100%;}
     100% { opacity: 0%;}
+
    }
+   */
 /*COPOS NIEVE*/
 
     .snow, .snow:before, .snow:after {
