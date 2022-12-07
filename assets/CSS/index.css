@@ -168,7 +168,8 @@ a:hover{
 
                 .logoimg{visibility: visible;
                 margin-left: 80%;
-            width: 55px;}
+                width: 55px;
+            top: 0.5%;}
 
                 .inicio{visibility: visible;}
 
@@ -193,8 +194,10 @@ a:hover{
                 background-image: url(../imagen/indexfotos/wallpapergif.gif);
                 background-size: cover;
                 width: 100%;
-                background-position: center;
-                background-repeat: no-repeat;}
+                height: 100%;
+                background-position: top;
+                background-repeat: no-repeat;
+            overflow: hidden;}
 
                 }
 
@@ -247,6 +250,7 @@ a:hover{
 
 .about-section-padding{
     background-color: rgb(41, 38, 54);
+    width: 100vw;
     padding-bottom: 0.8px;
 }
 .imagenesnoticias:hover{
@@ -263,6 +267,9 @@ a:hover{
     font-family: 'Amatic SC', cursive;
     font-stretch: expanded;
     font-size: 30px;
+}
+.parx{
+    text-align: justify;
 }
 
 
@@ -453,6 +460,7 @@ h1{
 @media(max-width: 990px ) {
     .descrip{
         text-align: justify;
+        font-size: 13px;
     }
     
 }
