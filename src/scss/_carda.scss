@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90px;
+    
 
 }
 .wrap .carda{
@@ -12,9 +13,41 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    position: relative;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 35%;
+    left: 5%;
     border-radius: 100px 20px 20px 100px;
+    animation: animada 15s linear infinite;
+    animation-delay: calc(3s * var(--delay));
 }
+
+.wrap:hover .carda{
+animation-play-state: paused;
+}
+
+.wrap .carda:last-child{
+    animation-delay: calc(-3s * var(--delay));  
+}
+@keyframes animada {
+    0%{opacity: 0;
+        transform: translateY(100%) scale(0.5);}
+
+    5%, 20%{opacity: 0.4;
+        transform: translateY(100%) scale(0.7);}
+    
+    25%, 40%{opacity: 1;
+            transform: translateY(0%) scale(1);
+        pointer-events: auto;}
+    
+    45%, 60%{opacity: 1;
+            transform: translateY(-100%) scale(0.7);}
+    
+    65%, 100%{opacity: 0;
+        transform: translateY(-100%) scale(0.5);}
+    }
+
 
 
 .wrap .carda .imgcarda{
@@ -27,11 +60,46 @@ border-radius: 50%;
 padding: 1px;
 box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
 left: 2px;
-margin-top: -18px;
+margin-top: -1px;
 }
 .carda .imgcarda img{
     height: 100%;
     width: 100%;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.carda .contenidoo{
+    display: flex;
+    align-items: center;
+    margin-left: 1px;
+    justify-content: end;
+}
+
+.carda .detall{
+    margin-left: 120px;
+}
+
+.detall span{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.carda a{
+    background-color: rgb(51, 47, 69);
+    justify-content: end;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 1px 30px ;
+    margin-right: -15px;
+    border-radius: 25px;
+}
+
+@media(max-width:644px){
+    .wrap .carda{
+        top: 40%;
+        left: 0.5%;
+        width: auto;
+    }
+    
 }
