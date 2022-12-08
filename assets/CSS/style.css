@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.btn {
+  @i;
+}
+
 nav {
   background-color: rgb(41, 38, 54);
   width: 100vw;

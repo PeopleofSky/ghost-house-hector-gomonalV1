@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.btn{
+    @include button(yellow, white)
+}
+
 @import "aanavbar";
 @import "aatextoenlaces";
 @import "nieblaindex";
@@ -14,9 +18,10 @@
 @import "nosotros";
 @import "formulario";
 @import "cardtrailer";
-
+@import "variable";
 @import "carda";
-
+@import "mixins";
+@import "extends";
 
 
 
