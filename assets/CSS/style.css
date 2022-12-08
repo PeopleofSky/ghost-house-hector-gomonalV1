@@ -1,0 +1,676 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgb(41, 38, 54);
+  width: 100vw;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 8%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: flex;
+  color: #fff;
+  padding: 14%;
+  padding-right: 50px;
+}
+
+.inicio {
+  visibility: hidden;
+}
+
+.namecompany {
+  display: flex;
+  position: absolute;
+  top: 1.7%;
+  left: 10%;
+  z-index: 2;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.fa-bars {
+  color: #fff;
+  font-size: 25px;
+  padding: 20px;
+  visibility: hidden;
+}
+
+@media (max-width: 980px) {
+  .logoimg {
+    width: 80px;
+    left: 1%;
+    margin-top: 1%;
+  }
+  .namecompany {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 9%;
+    z-index: 2;
+    font-family: "Amatic SC", cursive;
+    font-weight: bold;
+    font-size: 45px;
+  }
+  nav {
+    background-color: rgb(41, 38, 54);
+    width: 100vw;
+    display: flex;
+    justify-content: right;
+  }
+  nav ul {
+    text-align: center;
+    margin-left: 10%;
+  }
+  nav ul li a {
+    padding-right: 1px;
+  }
+}
+@media (max-width: 644px) {
+  nav {
+    background-color: rgb(41, 38, 54);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav ul {
+    margin-left: 0%;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: -730px;
+    justify-items: center;
+    width: 100vw;
+    height: auto;
+    z-index: 3;
+    background-color: rgb(41, 38, 54);
+    border-radius: 2.5%;
+    border-style: groove;
+    transition: 0.2s;
+    box-shadow: 0px 0px 20px 0px rgb(137, 120, 253);
+  }
+  .fa-bars {
+    visibility: visible;
+  }
+  .fa-bars:hover + ul {
+    left: 0;
+  }
+  nav ul:hover {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0px;
+    justify-items: center;
+    width: 100vw;
+    height: auto;
+    z-index: 3;
+    background-color: rgb(41, 38, 54);
+    transition: 0.2s;
+    box-shadow: 0px 0px 20px 0px rgb(137, 120, 253);
+  }
+  .logoimg {
+    visibility: visible;
+    margin-left: 80%;
+    width: 55px;
+    top: 0.5%;
+  }
+  .inicio {
+    visibility: visible;
+  }
+  .namecompany {
+    left: 20%;
+    top: 2%;
+  }
+  .bodyindex {
+    z-index: 1;
+    background-image: url(../imagen/indexfotos/wallpapergif.gif);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+.logo {
+  display: flex;
+  z-index: 1;
+}
+
+.logoimg {
+  position: absolute;
+  z-index: 7;
+}
+
+a {
+  font-family: "Amatic SC", cursive;
+  text-decoration: none;
+  color: azure;
+  font-size: 24pt;
+  margin-right: 50px;
+  z-index: 4;
+}
+
+a:hover {
+  color: #fff;
+  letter-spacing: 0.2em;
+  text-shadow: -2px -7px 6px rgb(137, 120, 253);
+}
+
+@media (max-width: 980px) {
+  a:hover {
+    color: #fff;
+    letter-spacing: 0.05em;
+    text-shadow: -2px -7px 6px rgb(137, 120, 253);
+  }
+}
+.conte-padre {
+  background-image: url(../imagen/indexfotos/backgroundcolorblue1400x800.jpg);
+  width: 100vw;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.conte-degradado {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+@media (max-width: 980px) {
+  .conte-padre {
+    background-position: center;
+  }
+  .conte-degradado {
+    visibility: hidden;
+  }
+}
+@media (max-width: 644px) {
+  .conte-padre {
+    visibility: hidden;
+  }
+}
+@media (max-width: 644px) {
+  .snow_wrap {
+    visibility: hidden;
+    height: 90vh;
+    width: 100%;
+    background-color: rgba(12, 11, 11, 0);
+    overflow: hidden;
+    position: relative;
+  }
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  font-size: 16px;
+  margin: 0;
+  background: rgb(2, 2, 2);
+  color: rgb(0, 0, 0);
+}
+
+.snow_wrap {
+  height: 90vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+  position: relative;
+}
+
+/*SE TUVO QUE DESACTIVAR ESTAS ANIMACIONES POR PROBLEMAS CON @MEDIA
+
+.lucesauto{
+    position: absolute;
+    top: 580px;
+    opacity: 2%;
+
+
+}
+.lucesauto:hover{
+    opacity: 100%;
+
+}
+
+.faro1{
+   position: absolute;
+   top: 170px; 
+   left: 133px;
+   opacity: 2%;
+}
+.faro1:hover{
+    opacity: 100%;
+
+}
+
+/*GHOST EN INDEX
+.ghostindex{
+    position: absolute;
+    top:48%;
+    left:40%;
+   opacity: 0%;
+
+}   
+.ghostindex:hover{
+animation: Ghostindex 3s;
+animation-iteration-count: infinite;
+}
+@keyframes Ghostindex {
+0% {    opacity: 0%;}
+50% { opacity: 100%;}
+100% { opacity: 0%;}
+
+}
+*/
+/*COPOS NIEVE*/
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: radial-gradient(4px 4px at 100px 50px, #fff, transparent), radial-gradient(6px 6px at 200px 150px, #fff, transparent), radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+  animation: snow 3s linear infinite;
+  content: "";
+}
+
+.snow:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.snow:before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(650px);
+  }
+}
+.imagecasa {
+  width: 70%;
+  position: absolute;
+  bottom: 0%;
+  left: 36%;
+}
+
+@media (max-width: 980px) {
+  .imagecasa {
+    width: auto;
+    left: 2%;
+  }
+}
+@media (max-width: 644px) {
+  .imagecasa {
+    visibility: hidden;
+  }
+}
+/*NOTICIAS*/
+.bodybg {
+  background-image: url(../imagen/body\ wallpaper.jpg);
+  background-repeat: repeat;
+}
+
+.about-section-padding {
+  background-color: rgb(41, 38, 54);
+  width: 100vw;
+  padding-bottom: 0.8px;
+}
+
+.imagenesnoticias:hover {
+  transition: 0.4s;
+  transform: scale(1.2);
+}
+
+.tituloz {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.subtituloz {
+  font-family: "Amatic SC", cursive;
+  font-stretch: expanded;
+  font-size: 30px;
+}
+
+.parx {
+  text-align: justify;
+}
+
+/*NOSOTROS*/
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 80px;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.sobrenosotros {
+  display: flex;
+  color: aliceblue;
+  background-image: linear-gradient(to right, rgb(56, 56, 84), black);
+  margin-top: 100px;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .sobrenosotros {
+    flex-direction: column;
+    background-image: linear-gradient(to top, rgb(56, 56, 84), black);
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+}
+.imgnosotros {
+  display: flex;
+  width: 500px;
+}
+
+@media (max-width: 1100px) {
+  .imgnosotros {
+    width: 400px;
+  }
+}
+.descrip {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: auto;
+  font-size: 22px;
+  padding: 50px;
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  .descrip {
+    padding: 30px;
+    text-align: center;
+    font-size: 13px;
+  }
+}
+.formulario1 {
+  max-width: 35em;
+  padding: 1.3em;
+  margin: 0 auto;
+  background-color: rgba(59, 51, 114, 0.3);
+  font-family: "Amatic SC", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 1em;
+  box-shadow: inset 1px 1px 12px 4px rgba(253, 253, 253, 0.605);
+  margin-top: 5%;
+}
+
+.formulario1:hover {
+  box-shadow: inset 2px 2px 30px 3px rgba(253, 253, 253, 0.605);
+}
+
+.btn:hover {
+  transition: 0.2s;
+  transform: scale(1.3);
+  animation: ease-in-out;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card:hover {
+  width: 600px;
+  transition-delay: 0s;
+}
+
+.card .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(251, 246, 255);
+  border-radius: 20px;
+  clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+
+.card:hover .circle::before {
+  clip-path: circle(400px at center);
+  overflow: hidden;
+}
+
+.card .circle .logotrailer1 {
+  position: relative;
+  width: 250px;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card:hover .circle .logotrailer1 {
+  transform: scale(0);
+  transition-delay: 0.2s;
+}
+
+.contenido {
+  font-size: 3px;
+  position: relative;
+  width: 60%;
+  left: 10%;
+  padding: 5px 5px 5px 5px;
+  visibility: hidden;
+  transition: 0s;
+}
+
+.card:hover .contenido {
+  left: 0;
+  opacity: 1;
+  font-size: 14px;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.contenido h2 {
+  color: rgb(142, 16, 16);
+  text-transform: uppercase;
+}
+
+.card .videoyoutube {
+  position: absolute;
+  top: 30%;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card:hover .videoyoutube {
+  transform: scale(1);
+  top: 90%;
+  z-index: 2;
+}
+
+@media (max-width: 500px) {
+  .bodytrailer {
+    justify-content: left;
+  }
+  .card {
+    width: 35%;
+  }
+  .card:hover {
+    justify-content: left;
+    width: 42%;
+  }
+  .card .videoyoutube {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+  }
+  .trailer2 {
+    display: block;
+  }
+}
+.cardq {
+  visibility: hidden;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 300px;
+  height: 180px;
+  border-radius: 10%;
+  background-color: aqua;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba(254, 254, 254, 0.25);
+  transition: 1s;
+}
+
+.cardq .imgcaja {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  background-color: black;
+  transition: 1s;
+}
+
+.cardq:hover {
+  transform: translateX(50%);
+}
+
+.cardq:hover .imgcaja {
+  transform: rotateY(-180deg);
+}
+
+.cardq .imgcaja img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.cardq .detalles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardq .detalles .contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrap .carda {
+  background-color: aliceblue;
+  width: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  border-radius: 100px 20px 20px 100px;
+}
+
+.wrap .carda .imgcarda {
+  height: 115px;
+  width: 115px;
+  position: absolute;
+  left: -5px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  padding: 1px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  left: 2px;
+  margin-top: -18px;
+}
+
+.carda .imgcarda img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
