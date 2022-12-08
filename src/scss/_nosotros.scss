@@ -1,0 +1,59 @@
+
+/*NOSOTROS*/
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size:80px;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 40px;
+}
+.sobrenosotros{
+    display: flex;
+    color: aliceblue;
+    background-image: linear-gradient(to right, rgb(56, 56, 84) , black);
+    margin-top: 100px;
+    justify-content: center;
+}
+@media(max-width:1100px){
+    
+    .sobrenosotros{
+        flex-direction: column;
+        background-image: linear-gradient(to top, rgb(56, 56, 84) , black);
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        overflow: hidden;
+    }
+}
+
+.imgnosotros{
+    display: flex;
+    width: 500px;}
+
+
+@media(max-width: 1100px) {
+    .imgnosotros{
+      
+        width: 400px;
+      
+    }
+    
+}
+
+.descrip{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ width: auto;
+ font-size: 22px; 
+ padding: 50px; 
+ text-align: center;
+}
+@media(max-width: 990px ) {
+    .descrip{
+        padding: 30px;
+        text-align: center;
+        font-size: 13px;
+    }
+    
+}
